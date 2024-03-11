@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="addTodoCotainer" >
+    <div id="addTodoCotainer" class="addTodoCotainer" >
         <input type="text" id="task" placeholder="Enter task title" name="task"/>
         <input type="date" id="duedate"  name="duedate"/>
         <input type="text" id="desc" placeholder="Enter task Description" name="desc"/>
         <input type="submit" id="addTodo" value="Add Todo"/>
     </div>
-    <div class="container">
-        <div id="todoList" class="todoList"></div>
-        <div id="inProgress" class="inProgress"></div>
-        <div id="completed" class="completed"></div>
+    <div class="main-container">
+        <div id="todoList" class="container todoList">
+        </div>
+        <div id="inProgress" class="container inProgress"></div>
+        <div id="completed" class="container completed"></div>
     </div>
     <script src="index.js"></script>
 </body>

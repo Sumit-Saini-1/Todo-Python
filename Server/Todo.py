@@ -5,9 +5,9 @@ cursor = db.cursor()
 
 class Todo:
     @staticmethod
-    def createTodo(task,duedate):
-        query = "INSERT INTO todos (task, duedate, isCompleted) VALUES (%s, %s, %s)"
-        values = (task,duedate,False)
+    def createTodo(task,duedate,desc):
+        query = "INSERT INTO todos (task, duedate,desc, isCompleted) VALUES (%s, %s, %s,%s)"
+        values = (task,duedate,desc,False)
         try:
             cursor.execute(query, values)
             db.commit()

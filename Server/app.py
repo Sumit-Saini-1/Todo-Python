@@ -17,7 +17,8 @@ def todo():
             data = request.get_json()
             task=data['task']
             duedate=data['duedate']
-            res=Todo.createTodo(task,duedate)
+            desc=data['desc']
+            res=Todo.createTodo(task,duedate,desc)
             if res==True:
                 return jsonify({'message': 'Todo created successfully!'}), 200
             else:
